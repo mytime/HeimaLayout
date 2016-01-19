@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+相对布局：
+    组件默认位置都在左上角，组件之间可以重叠
+    可以相对与父元素上下左右对齐，相对于父元素，水平居中，垂直居中，水平垂直同时居中
+    可以相对于其他组件上下左右对齐
+    可以布局与其他组件的上方/下方/左边/右边
+
+
+相对于父级容器：
+    layout_alignParentTop：与父级容器上对齐
+    layout_alignParentBottom：与父级容器下对齐
+    layout_alignParentLeft：与父级容器左对齐
+    layout_alignParentRight :与父级容器右对齐
+
+先对于组件容器：
+    layout_toRightOf : 在...的右边
+    layout_toLeftOf : 在...的左边
+    layout_above : 在...的上边
+    layout_toRightOf : 在...的右边
+    layout_toRightOf="@id/tv3: 在id=tv3的右边
+
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--android:layout_centerInParent="true  水平垂直都居中"-->
+   <Button
+       android:id="@+id/center"
+       android:text="中间"
+       android:layout_centerInParent="true"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+    <Button
+       android:id="@+id/above"
+       android:text="上边"
+        android:layout_alignRight="@id/center"
+        android:layout_alignLeft="@id/center"
+        android:layout_above="@id/center"
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+    <Button
+       android:id="@+id/below"
+       android:text="下边"
+        android:layout_alignRight="@id/center"
+        android:layout_alignLeft="@id/center"
+        android:layout_below="@id/center"
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+    <Button
+       android:id="@+id/Left"
+       android:text="左边"
+        android:layout_toLeftOf="@id/center"
+        android:layout_alignTop="@id/center"
+        android:layout_alignBottom="@id/center"
+        android:layout_alignParentLeft="true"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+       android:id="@+id/Right"
+       android:text="右边"
+        android:layout_toRightOf="@id/center"
+        android:layout_alignTop="@id/center"
+        android:layout_alignBottom="@id/center"
+        android:layout_alignParentRight="true"
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+
+        />
+    <Button
+       android:id="@+id/LeftTop"
+       android:text="center左上角"
+        android:layout_toLeftOf="@id/center"
+        android:layout_above="@id/center"
+        android:layout_alignParentLeft="true"
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+
+        />
+
+    <Button
+       android:id="@+id/RightTop"
+       android:text="center右上角"
+        android:layout_toRightOf="@id/center"
+        android:layout_above="@id/center"
+        android:layout_alignParentRight="true"
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+        />
+
+    <Button
+       android:id="@+id/LeftBelow"
+       android:text="center左下角"
+        android:layout_toLeftOf="@id/center"
+        android:layout_below="@id/center"
+        android:layout_alignParentLeft="true"
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+        />
+
+    <Button
+       android:id="@+id/RightBelow"
+       android:text="center右下角"
+        android:layout_toRightOf="@id/center"
+        android:layout_below="@id/center"
+        android:layout_alignParentRight="true"
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+        />
+
+
+
+
+
+</RelativeLayout>

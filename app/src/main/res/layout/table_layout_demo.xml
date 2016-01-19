@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--表格布局
+android:stretchColumns="1" 拉伸第1列填充屏幕剩余宽度
+android:gravity="right :内部文字右侧对齐
+TableLayout下面的二级节点默认宽度都是匹配父元素
+-->
+
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+
+    <!--第一行-->
+    <TableRow
+        >
+        <!--默认是从第0列开始-->
+        <!--<TextView-->
+            <!--android:text="  "-->
+            <!--/>-->
+
+        <!--设置列索引值=1，默认是0，配合拉伸属性-->
+        <TextView
+            android:layout_column="1"
+            android:text="open"
+            />
+        <TextView
+            android:gravity="right"
+            android:text="Ctrl-O"
+            />
+    </TableRow>
+    <!--第二行-->
+    <TableRow>
+        <!--<TextView-->
+            <!--android:text="  "-->
+            <!--/>-->
+        <TextView
+            android:layout_column="1"
+            android:text="save"
+            />
+        <TextView
+            android:layout_gravity="right"
+            android:text="Ctrl-S"
+            />
+    </TableRow>
+
+    <TableRow>
+        <!--<TextView-->
+            <!--android:text="  "-->
+            <!--/>-->
+        <TextView
+            android:layout_column="1"
+            android:text="save AS"
+            />
+        <TextView
+            android:text="Ctrl-Shift-S"
+            />
+    </TableRow>
+<!--分割线-->
+    <TextView
+        android:layout_height="1dp"
+        android:background="#000000"
+        />
+    <TableRow>
+        <TextView
+            android:text="X"
+            />
+        <!--android:layout_span="2" 当前列占用两列-->
+        <TextView
+            android:layout_span="2"
+            android:text="Import"
+            />
+        <!--<TextView-->
+            <!--android:text=""-->
+            <!--/>-->
+
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="X"
+            />
+        <TextView
+            android:text="Export"
+            />
+        <TextView
+            android:gravity="right"
+            android:text="Ctrl-E"
+            />
+    </TableRow>
+    <TableRow >
+        <!--<TextView-->
+            <!--android:text=""-->
+            <!--/>-->
+        <!--android:layout_span="2" 当前列占用两列-->
+        <TextView
+            android:layout_column="1"
+            android:layout_span="2"
+            android:text="Quit"
+            />
+        <!--<TextView-->
+            <!--android:text=""-->
+            <!--/>-->
+
+
+    </TableRow>
+
+
+
+
+
+
+</TableLayout>
